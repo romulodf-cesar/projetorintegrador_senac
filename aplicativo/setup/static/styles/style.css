@@ -1,16 +1,29 @@
+/* Estilos para o aplicativo */
+/*
+  #0A2A5E - Azul escuro: background
+  #2EC71C - Verde claro: gráficos e títulos
+  #E53935 - Vermelho: alertas e destaques
+  #6C4AB6 - Roxo: elementos secundários (dashboards etc)
+  #F5F7FB - Cinza claro: dashboards e fundos de gráficos
+  #2C2C2C - Cinza escuro: texto 
+*/
+
 body{
-    background-color:#95A5A6;
+    background-color:#0A2A5E;
 }
 
 h1{
-    color: #3498DB;
+    color: #2EC71C;
 }
 h2{
-    color: #2ECC71;
+    color: #E53935;
 }
 h3{
-    color: #F1C40F;
+    color: #6C4AB6;
 }
 h4{
-    color:#95A5A6;
+    color:#F5F7FB;
+}
+h5{
+    color:#2C2C2C;
 }
