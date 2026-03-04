@@ -1,0 +1,122 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlicoControl - Seu Equilíbrio Diário</title>
+    <!-- Fontes e Ícones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+
+</head>
+<body>
+
+    <!-- Topo -->
+    <header>
+        <div>
+           
+            <span>Logo<strong style="color:var(--azul-saude)">Aqui</strong></span>
+            <img src="{% static 'assets/logoteste.png'  %}" alt="logo do aplicativo GlicoControl com cores azul e verde" class="logo">
+        </div>
+        <div class="user-profile">
+            JS
+        </div>
+    </header>
+
+    <!-- Área Principal -->
+    <main>
+        <section class="welcome-msg">
+            <h1>Olá, João Silva</h1>
+            <p>Seu controle está em dia. Continue assim!</p>
+        </section>
+
+        <!-- Grade de Dashboard -->
+        <div class="dashboard-grid">
+            <div class="card status-green">
+                <span class="card-title">Última Glicemia</span>
+                <span class="card-value">110 <span class="card-unit">mg/dL</span></span>
+            </div>
+            <div class="card status-blue">
+                <span class="card-title">Insulina (Dia)</span>
+                <span class="card-value">14 <span class="card-unit">unid.</span></span>
+            </div>
+            <div class="card status-red">
+                <span class="card-title">Alerta</span>
+                <span class="card-value" style="font-size: 1rem; color: var(--vermelho-alerta)">Refeição Atrasada</span>
+            </div>
+            <div class="card status-blue">
+                <span class="card-title">Atividade</span>
+                <span class="card-value">3.4 <span class="card-unit">km</span></span>
+            </div>
+        </div>
+
+        <!-- Insight de Tecnologia / IA -->
+        <section class="ia-insight">
+            <h3><i class="fas fa-microchip"></i> Inteligência PsicoTech</h3>
+            <p>Com base no seu histórico das quartas-feiras, seu equilíbrio glicêmico tende a oscilar após as 18h. Recomendamos uma caminhada leve de 15 minutos hoje após o jantar.</p>
+        </section>
+
+        <!-- Histórico Recente -->
+        <section class="history-section">
+            <div class="history-header">
+                <h2>Registros de Hoje</h2>
+                <a href="#" style="font-size: 0.8rem; color: var(--azul-saude); text-decoration: none; font-weight: bold;">Ver tudo</a>
+            </div>
+            
+            <div class="history-item">
+                <div class="item-info">
+                    <h4>Pós-Almoço</h4>
+                    <span>Hoje, 13:45</span>
+                </div>
+                <div class="item-value" style="color: var(--verde-eq);">124 mg/dL</div>
+            </div>
+
+            <div class="history-item">
+                <div class="item-info">
+                    <h4>Jejum</h4>
+                    <span>Hoje, 07:15</span>
+                </div>
+                <div class="item-value" style="color: var(--verde-eq);">98 mg/dL</div>
+            </div>
+
+            <div class="history-item">
+                <div class="item-info">
+                    <h4>Madrugada</h4>
+                    <span>Hoje, 03:00</span>
+                </div>
+                <div class="item-value" style="color: var(--vermelho-alerta);">180 mg/dL</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé com Menus -->
+    <footer>
+        <a href="#" class="nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Início</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-chart-line"></i>
+            <span>Gráficos</span>
+        </a>
+        
+        <!-- Botão de Ação Central -->
+        <div class="btn-add">
+            <i class="fas fa-plus fa-lg"></i>
+        </div>
+
+        <a href="#" class="nav-item">
+            <i class="fas fa-calendar-alt"></i>
+            <span>Agenda</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-user-circle"></i>
+            <span>Perfil</span>
+        </a>
+    </footer>
+
+</body>
+</html>

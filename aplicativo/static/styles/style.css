@@ -27,3 +27,289 @@ h4{
 h5{
     color:#2C2C2C;
 }
+
+
+
+        :root {
+            /* Cores extraídas da imagem da equipe */
+            --azul-saude: #3b82f6;      /* Saúde e Confiança */
+            --azul-esca: #1e293b;       /* Profissionalismo / Fundo Escuro */
+            --verde-eq: #10b981;        /* Equilíbrio e Controle (Glicemia Normal) */
+            --vermelho-alerta: #ef4444; /* Atenção e Alerta (Glicemia Alta/Baixa) */
+            --roxo-ia: #8b5cf6;         /* Tecnologia e IA (Insights) */
+            
+            --cinza-fundo: #f1f5f9;
+            --branco: #ffffff;
+            --texto-corpo: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--cinza-fundo);
+            color: var(--texto-corpo);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding-bottom: 70px; /* Espaço para o menu inferior no mobile */
+        }
+
+        /* --- TOPO (HEADER) --- */
+        header {
+            background-color: var(--branco);
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            color: var(--azul-saude);
+            font-size: 1.5rem;
+        }
+
+        .logo span {
+            font-weight: 800;
+            color: var(--azul-esca);
+            font-size: 1.2rem;
+            letter-spacing: -0.5px;
+        }
+
+        .user-profile {
+            width: 35px;
+            height: 35px;
+            background-color: var(--azul-esca);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--branco);
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* --- ÁREA PRINCIPAL (MAIN) --- */
+        main {
+            flex: 1;
+            padding: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .welcome-msg {
+            margin-bottom: 1.5rem;
+        }
+
+        .welcome-msg h1 {
+            font-size: 1.5rem;
+            color: var(--azul-esca);
+        }
+
+        .welcome-msg p {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        /* Cards de Dashboard */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--branco);
+            padding: 1.25rem;
+            border-radius: 1.25rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: #94a3b8;
+            text-transform: uppercase;
+        }
+
+        .card-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--azul-esca);
+        }
+
+        .card-unit {
+            font-size: 0.8rem;
+            font-weight: normal;
+            color: #64748b;
+        }
+
+        /* Estilos baseados no status (Cores do time) */
+        .status-green { border-bottom: 4px solid var(--verde-eq); }
+        .status-red { border-bottom: 4px solid var(--vermelho-alerta); }
+        .status-blue { border-bottom: 4px solid var(--azul-saude); }
+
+        /* Área de IA (Roxo) */
+        .ia-insight {
+            background: linear-gradient(135deg, var(--roxo-ia), #a78bfa);
+            color: var(--branco);
+            padding: 1.5rem;
+            border-radius: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ia-insight h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ia-insight p {
+            font-size: 0.85rem;
+            line-height: 1.4;
+            opacity: 0.9;
+        }
+
+        /* Lista de Histórico */
+        .history-section {
+            background-color: var(--branco);
+            border-radius: 1.5rem;
+            padding: 1.25rem;
+        }
+
+        .history-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .history-header h2 {
+            font-size: 1rem;
+            color: var(--azul-esca);
+        }
+
+        .history-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .history-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-info h4 {
+            font-size: 0.9rem;
+            color: var(--azul-esca);
+        }
+
+        .item-info span {
+            font-size: 0.75rem;
+            color: #94a3b8;
+        }
+
+        .item-value {
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        /* --- RODAPÉ (FOOTER MENU) --- */
+        footer {
+            background-color: var(--branco);
+            border-top: 1px solid #e2e8f0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 0.75rem 0;
+            z-index: 100;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #94a3b8;
+            gap: 4px;
+            transition: color 0.2s;
+        }
+
+        .nav-item i {
+            font-size: 1.2rem;
+        }
+
+        .nav-item span {
+            font-size: 0.65rem;
+            font-weight: 600;
+        }
+
+        .nav-item.active {
+            color: var(--azul-saude);
+        }
+
+        /* Botão de Adição Centralizado (Padrão Apps) */
+        .btn-add {
+            background-color: var(--azul-saude);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--branco);
+            box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
+            margin-top: -25px;
+            border: 4px solid var(--branco);
+            cursor: pointer;
+        }
+
+        /* Responsividade Desktop */
+        @media (min-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            main {
+                padding: 3rem 1.5rem;
+            }
+
+            footer {
+                width: auto;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 20px;
+                border: 1px solid #e2e8f0;
+                border-radius: 50px;
+                padding: 0.75rem 2rem;
+                gap: 2rem;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            }
+        }
